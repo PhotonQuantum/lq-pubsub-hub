@@ -4,7 +4,7 @@ from pydantic.main import BaseModel
 from .types import TopicID
 
 
-class TopicName(BaseModel):
+class InputTopic(BaseModel):
     default: str
 
     @root_validator
@@ -15,7 +15,5 @@ class TopicName(BaseModel):
         return obj
 
 
-class Topic(BaseModel):
+class Topic(InputTopic):
     _id: TopicID
-    token: str
-    name: TopicName
