@@ -2,5 +2,8 @@
   "mongodb": {
     "uri": "mongodb://localhost:27017",
     "database": "pubsub-hub"
+  },
+  "secrets": {
+    "management": "9c8bb27bf1bdd67c2c4c2e8416a94185"
   }
 }
