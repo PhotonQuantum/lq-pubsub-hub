@@ -34,7 +34,7 @@ class InputSubscription(BaseModel):
         return obj
 
 
-class Subscription(BaseModel):
+class Subscription(InputSubscription):
     _id: SubscriptionID = Field(default_factory=uuid.uuid4)
     last_active: datetime = Field(default_factory=datetime.now)
     attrs: SubscriptionAttrs
